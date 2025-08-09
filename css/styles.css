@@ -74,6 +74,7 @@ body {
 
 .hero_main {
     width: 100%;
+    max-width: fit-content;
 }
 
 .hero_picture {
@@ -88,7 +89,7 @@ body {
     width: 100%;
     display: block;
     width: 100%;
-    
+
 }
 
 .hero_info {
@@ -100,7 +101,6 @@ body {
     top: 4rem;
     padding: 1rem 1.5rem;
     z-index: 2
-    
 }
 
 .hero_title {
@@ -144,19 +144,20 @@ body {
     }
 }
 
-.curvy-bg-mobile {
-    position: relative;
+.curvy_bg {
+    aspect-ratio: 375 / 141;
     width: 100vw;
-    overflow: hidden;
-    
+    background-image: url('../images/bg-curvy-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
     z-index: 1;
 }
 
-.curvy-bg-mobile img {
+/* .curvy_bg img {
     width: 100%;
     display: block;
     height: auto;
-}
+} */
 
 .features {
     margin: 0 auto;
@@ -172,6 +173,10 @@ body {
 .feature {
     line-height: 1.5;
     max-width: 300px;
+}
+
+.feature img{
+    height: 80px;
 }
 
 .feature_title {
@@ -325,6 +330,7 @@ body {
     font-weight: 700;
     cursor: pointer;
     transition: background-image .3s ease-in-out;
+
     &:hover {
         background-image: linear-gradient(to right, var(--teal-200), var(--teal-200));
     }
@@ -369,10 +375,11 @@ body {
     gap: 1rem;
 }
 
-.footer_links a{
+.footer_links a {
     text-decoration: none;
     color: var(--white);
     cursor: pointer;
+
     &:hover {
         font-weight: 700;
     }
@@ -398,6 +405,7 @@ body {
     align-items: center;
     justify-content: center;
     transition: border .3s ease-in-out, color .3s ease-in-out;
+
     &:hover {
         border: 2px solid var(--teal-200);
         color: var(--teal-200);
@@ -422,25 +430,79 @@ body {
 
 @media (min-width: 768px) {
     .nav_logo {
-    width: 150px;
-}
-.curvy-bg {
-    content: url(../images/bg-curvy-desktop.svg);
+        width: 150px;
+    }
+
+    .hero_info {
+        height: 10em;
+    }
+
+    .curvy_bg {
+    aspect-ratio: 1440 / 449;
+    width: 100vw;
+    background-image: url('../images/bg-curvy-desktop.svg');
 }
 
-.hero_title {
-    font-size: 2rem;
-    margin: 1rem auto;
-    max-width: 700px;
-}
+    .hero_title {
+        font-size: 2rem;
+        margin: 1rem auto;
+        max-width: 700px;
+    }
+
+    .features {
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+        padding: 10rem 0 2rem;
+    }
+
+    .feature {
+        max-width: 400px;
+    }
 
 }
 
 @media (min-width: 1012px) {
     .hero_title {
-    font-size: 2.5rem;
-    
-}
+        font-size: 2.5rem;
+
+    }
+    .productivity {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .hero_picture {
+        top: 0;
+    }
+
+    .productivity_info {
+        max-width: 35vw;
+    }
+
+    .productivity_title {
+        font-size: 2rem;
+        max-width: 400px;
+    }
+
+    .testimonials {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .testimonial {
+        max-width: 350px;
+    }
+        
 
 
 }
