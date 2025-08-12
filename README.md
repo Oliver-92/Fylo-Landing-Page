@@ -31,7 +31,7 @@ Los usuarios deberían poder:
 
 ### Links
 
-- [Solución](https://your-solution-url.com)
+- [Solución](https://www.frontendmentor.io/solutions/responsive-landing-page-using-flexbox-fqHvc0n0Ei)
 - [URL del sitio](https://oliver-92.github.io/Fylo-Landing-Page/)
 
 ## Mi proceso

@@ -465,7 +465,7 @@ body {
         align-items: center;
         flex-wrap: wrap;
         gap: 3rem;
-        padding: 10rem 0 2rem;
+        padding: 5rem 0 2rem;
     }
 
     .feature {
@@ -495,6 +495,10 @@ body {
 @media (min-width: 1012px) {
     .hero_title {
         font-size: 2.5rem;
+    }
+
+    .features {
+        padding: 0 0 2rem;
     }
 
     .productivity {
